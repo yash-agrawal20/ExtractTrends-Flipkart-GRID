@@ -6,6 +6,11 @@ document.querySelector('#show-modal').addEventListener('click',toggleModal)
 
 document.querySelector('.close-bar svg').addEventListener('click',toggleModal)
 
+function focusSbox() {
+    document.querySelector(".form-input").focus();
+}
+
+document.querySelector('.srch-icon').addEventListener('click',focusSbox)
 
 const yeahcool = document.querySelector('#show-modal')
 yeahcool.addEventListener('click', (event) => {

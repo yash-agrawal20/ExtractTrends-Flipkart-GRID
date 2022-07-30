@@ -37,13 +37,13 @@ label {
 }
 
 .container {
-  margin-top: 12%;
+  margin-top: 7%;
 }
 
 .arrow-btns {
   font-size: larger;
   position: relative;
-  top: 7em;
+  top: 9em;
 }
 
 .bar-font {
@@ -53,7 +53,8 @@ label {
   float: left;
   line-height: 20px;
   height: 50px;
-  color: red;
+  color: white;
+  font-weight: bolder;
 }
 
 * {
@@ -85,4 +86,112 @@ label {
   justify-content: flex-end;
   cursor: pointer;
   margin-right: -2rem;
+}
+
+.s-box {
+  margin-top: 1.2%;
+}
+
+.srch-icon {
+  position: absolute;
+  top: 25%;
+  color: #17a2b8;
+  left: 96%;
+  cursor: pointer;
+}
+
+.prim-nav {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 0px;
+  border: 1px solid transparent;
+}
+
+.nav-two {
+  color: black;
+  background-color: #d4d4d4;
+}
+
+.menu-bar {
+  text-align: center;
+}
+
+.menu-bar ul {
+  list-style: none;
+  display: inline-flex;
+}
+
+.menu-bar ul li {
+  width: 300px;
+  margin: 10px;
+  padding: 15px;
+}
+
+.menu-bar a {
+  padding: 5% 12%;
+}
+
+.menu-bar a:hover {
+  text-decoration: none;
+  background: rgb(182, 182, 182); 
+}
+
+.sub-menu {
+  display: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 {
+  display: block;
+  width: 15%;
+  text-align: left;
+  position: absolute;
+  background: rgb(187, 187, 187);
+  margin-top: 0.7%;
+  margin-left: 0%;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul {
+  display: block;
+}
+
+.menu-bar ul li:hover .sub-menu-2 {
+  display: block;
+  width: 15%;
+  text-align: left;
+  position: absolute;
+  background: rgb(187, 187, 187);
+  margin-top: 0.7%;
+  margin-left: 0%;
+}
+
+.menu-bar ul li:hover .sub-menu-2 ul {
+  display: block;
+}
+
+.menu-bar ul li:hover .sub-menu-3 {
+  display: block;
+  width: 16%;
+  text-align: left;
+  position: absolute;
+  background: rgb(187, 187, 187);
+  margin-top: 0.7%;
+  margin-left: 0%;
+}
+
+.menu-bar ul li:hover .sub-menu-3 ul {
+  display: block;
+}
+
+.menu-bar ul li:hover .sub-menu-4 {
+  display: block;
+  width: 18%;
+  text-align: left;
+  position: absolute;
+  background: rgb(187, 187, 187);
+  margin-top: 0.7%;
+  margin-left: 0%;
+}
+
+.menu-bar ul li:hover .sub-menu-4 ul {
+  display: block;
 }
