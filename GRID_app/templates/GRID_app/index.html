@@ -15,23 +15,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <link href="{% static 'GRID_app/styles.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
-    <nav class="navbar-expand-lg navbar-dark bg-primary prim-nav">
-        <span class="bar-font" href="#">!Fiddle-Faddle</span>
-
-        <div class="row height d-flex justify-content-center align-items-center s-box">
-            <div class="col-md-6">
-                <div class="form">
-                    <i class="fa fa-search srch-icon"></i>
-                    <input type="text" class="form-control form-input" placeholder="Search anything...">
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <nav class="navbar navbar-expand-lg nav-two">
+    
+    <div class="banner">
+    <nav class="navbar navbar-expand-lg ">
         <div class="menu-bar">
             <ul>
                 <li>
@@ -89,8 +80,40 @@
             </ul>
         </div>
     </nav>
+    </div>
+
+    <nav class="navbar-expand-lg  prim-nav">
+        <!--<img src="../../static/GRID_app/Images/log_j.png" alt="logo" class="logo_web">-->
+        <div class="row height d-flex justify-content-center align-items-center s-box">
+            <div class="col-md-6">
+                
+            </div>
+        </div>
+    </nav>
+    <div class="form">
+        <div class="wrapper">
+        <input type="text" class="form-control form-input" placeholder="What are you Looking For ?">
+        <div class="searchbtn"><i class="fas fa-search"></i></div>
+        </div>
+    </div>
     
+
+    
+    <!--Video-->
+    <div class="cner">
+        <div class="cner__contents">
+            <video autoplay muted loop id ="VideoPart"  width="1300" height="640" >
+                <source src="../../static/GRID_app/Images/FlipIntro.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="cner--fade"></div>
+    </div>
     <!-- Space allotted to modify with DB info -->
+
+    <div class="descrip">
+        <h1>Let us look at some of the trends of the day </h1>
+    </div>
+
 
     <div class="container" id="elem">
         {% for emp in employees %}
@@ -129,6 +152,19 @@
             </div>
             <h3 id="intro">This is content</h3>
             <p>Plz Subscreeb</p>
+        </div>
+    </div>
+    <div class=" footer-eq">
+        <div class="footer-content">
+            <!--add all information -->
+            <h3>!Fiddle Faddle</h3>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
         </div>
     </div>
 
