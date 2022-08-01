@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'GRID_fe.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'classicmodels',
+        'NAME': 'flipkartgg',
         'USER' : 'root',
         'HOST' : 'localhost',
         'PORT' : 3306,

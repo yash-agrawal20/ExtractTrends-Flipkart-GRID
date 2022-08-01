@@ -1,14 +1,14 @@
 from django.db import models
 
 # Create your models here.
-class Employees(models.Model):
-    employeenumber = models.IntegerField(db_column='employeeNumber', primary_key=True)  # Field name made lowercase.
-    lastname = models.CharField(db_column='lastName', max_length=50)  # Field name made lowercase.
-    firstname = models.CharField(db_column='firstName', max_length=50)  # Field name made lowercase.
-    extension = models.CharField(max_length=10)
-    email = models.CharField(max_length=100)
-    jobtitle = models.CharField(db_column='jobTitle', max_length=50)  # Field name made lowercase.
+class Instadata(models.Model):
+    profile_id = models.CharField(primary_key=True, max_length=30)
+    image_url = models.CharField(db_column='image_URL', max_length=500, blank=True, null=True)  # Field name made lowercase.
+    score = models.FloatField(blank=True, null=True)
+    cat = models.CharField(max_length=30, blank=True, null=True)
+    sub_cat = models.CharField(max_length=30, blank=True, null=True)
+    kwords = models.TextField(blank=True, null=True)
 
     class Meta:
         managed = False
-        db_table = 'employees'
+        db_table = 'instadata'

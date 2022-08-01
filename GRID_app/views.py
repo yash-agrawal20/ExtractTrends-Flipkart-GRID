@@ -1,11 +1,27 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Employees
+from .models import Instadata
+
+
 
 # Create your views here.
 def index(request):
-    employees = Employees.objects.all()
+    posts = Instadata.objects.all()
     context = {
-        'employees' : employees
+        'posts' : posts
     }
     return render(request, "GRID_app/index.html", context)
+
+def search(request):
+    form= UserForm(request.POST)
+    if form.is_valid():
+        q = form.cleaned_data['srch-item']
+    
+    sql = f"SELECT CAT,SUB_CAT FROM INSTADATA WHERE KWORDS LIKE %{q}%"
+
+    posts = Instadata.objects.raw(sql)[:2]
+
+    cont = {
+        'posts' : posts
+    }
+    return render(request, "GRID_app/index.html", cont)

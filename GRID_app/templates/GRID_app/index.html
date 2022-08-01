@@ -91,10 +91,12 @@
         </div>
     </nav>
     <div class="form">
-        <div class="wrapper">
-        <input type="text" class="form-control form-input" placeholder="What are you Looking For ?">
-        <div class="searchbtn"><i class="fas fa-search"></i></div>
-        </div>
+        <form action = "{% url 'search' %}">
+            <div class="wrapper">
+            <input type="text" name="srch-itm" class="form-control form-input" placeholder="What are you Looking For ?">
+            <div class="searchbtn"><i class="fas fa-search"></i></div>
+            </div>
+        </form>
     </div>
     
 
@@ -116,16 +118,16 @@
 
 
     <div class="container" id="elem">
-        {% for emp in employees %}
+        {% for emp in posts %}
 
             <label>
                 <div class="col-3">
                     <div class="card card-block">
-                        <div class="modal-div" onclick='update_div("{{ emp.lastname }}", "{{ emp.firstname }}")'><img class="card-img-top" id = "show-modal" src="https://picsum.photos/seed/picsum/200/300" alt="Card image cap"></div>
+                        <div class="modal-div"><img class="card-img-top" id = "show-modal" width = "200" height = "300" src="../static/GRID_app/Images/{{ emp.image_url }}" alt="Card image cap"></div>
                         <div class="card-body">
-                            <h5 class="card-title">{{emp.employeenumber}}</h5>
+                            <h5 class="card-title">{{emp.cat}}</h5>
                             <p class="card-text"> 
-                                {{emp.lastname}}, {{emp.firstname}} 
+                                {{emp.sub_cat}}
                             </p>
                             <a href="#" class="btn btn-primary"> See similar products </a>
                         </div>
@@ -150,8 +152,6 @@
                         stroke-width="2"/>
                 </svg>
             </div>
-            <h3 id="intro">This is content</h3>
-            <p>Plz Subscreeb</p>
         </div>
     </div>
     <div class=" footer-eq">
